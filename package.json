@@ -1,0 +1,35 @@
+{
+  "name": "hey",
+  "version": "3.0.2-beta",
+  "private": true,
+  "license": "AGPL-3.0",
+  "scripts": {
+    "build": "turbo run build --parallel",
+    "codegen": "turbo run codegen --parallel",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint --parallel",
+    "lint:affected": "turbo run lint --parallel --filter=[origin/main]",
+    "lint:fix": "turbo run lint:fix --parallel",
+    "prepare": "husky install",
+    "prettier": "turbo run prettier --parallel",
+    "prettier:affected": "turbo run prettier --parallel --filter=[origin/main]",
+    "prettier:fix": "turbo run prettier:fix --parallel",
+    "start": "turbo run start --parallel",
+    "test:dev": "turbo run test:dev",
+    "typecheck": "turbo run typecheck --parallel",
+    "typecheck:affected": "turbo run typecheck --parallel --filter=[origin/main]"
+  },
+  "eslintConfig": {
+    "root": true
+  },
+  "devDependencies": {
+    "husky": "^8.0.3",
+    "prettier": "^3.1.1",
+    "prettier-plugin-tailwindcss": "^0.5.9",
+    "turbo": "^1.11.2"
+  },
+  "packageManager": "pnpm@8.10.5",
+  "engines": {
+    "node": "18"
+  }
+}
